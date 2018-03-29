@@ -1,0 +1,28 @@
+.image-block {
+    display:flex;
+    align-items: flex-start;
+}
+
+.image-block > :first-child {
+    border-right:2px solid rgba(0, 0, 0, 0.3);
+    padding:5px;
+}
+
+.image-block > .textblock {
+    align-self:center;
+    padding: 10px;
+    width:50%;
+}
+
+.image-block > .textblock > label {
+    width:100%;
+}
+
+.image-block > .textblock textarea {
+    min-height:50px;
+    width:100%;
+}
+
+#submit-button {
+    width:100%;
+}
