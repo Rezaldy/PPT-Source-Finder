@@ -1,6 +1,12 @@
 Dropzone.autoDiscover = false;
 
 $(document).ready(function(){
+    $("#copyConfirm").click(function(){
+        $("#confirm").select();
+        document.execCommand('copy');
+        alert("Sources copied to clipboard!");
+    });
+    
     var myDropzone = new Dropzone("div#dropzone-form", {
         url: "/upload",
         init: function() {

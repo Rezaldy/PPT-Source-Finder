@@ -7,6 +7,7 @@ use PhpOffice\PhpPresentation;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Mnvx\Lowrapper;
 use App;
+use View;
 
 class UploadController extends Controller
 {
@@ -198,11 +199,10 @@ class UploadController extends Controller
                                             'presentation_id' => $presId,
                                             'source' => $source
                                             ]);
-                $images[] = $image;
                 $image->save();
             }
+            $images[] = $source;
         }
-        
-        return redirect('/');
+        return View::make("confirm")->with(compact('images'));
     }
 }

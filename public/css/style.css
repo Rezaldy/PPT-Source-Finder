@@ -26,3 +26,8 @@
 #submit-button {
     width:100%;
 }
+
+textarea#confirm {
+    width: 100%;
+    min-height: 150px;
+}
